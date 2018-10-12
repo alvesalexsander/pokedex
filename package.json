@@ -1,0 +1,19 @@
+{
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "Testando PokeAPI pela primeira vez",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver scss"
+  },
+  "author": "SashaClimax",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.0",
+    "node-sass": "^4.9.3",
+    "request": "^2.88.0"
+  }
+}

@@ -1,0 +1,119 @@
+.pokedex{
+    width: 100vw;
+    height: 100vh;
+    background: url(../img/beigebg.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &__frame{
+        width: 60vw;
+        height: 80vh;
+        background: linear-gradient(to top right, rgba($color-primary-dark, 1),rgba($color-primary-dark, 1) 40%, rgba($color-primary, 1));
+        border: .3rem solid $color-black;
+        border-radius: .3rem;
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 8rem;
+        z-index: 1;
+        box-shadow: 0 4rem 10rem rgba($color-black, 1);
+        
+        
+        &::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 10vh;
+            background: linear-gradient(to bottom left, rgba($color-primary-light, 1), rgba($color-primary-dark, 1));
+            bottom: -.3rem;
+            border: .3rem solid $color-black;
+            transform: scale(1.008);
+            z-index: 2;
+            box-shadow: 0 -1rem 20rem $color-black;
+        }
+        
+        &__search{
+            width: 40rem;
+            height: 10rem;
+            display: flex;
+        }
+        
+        &__display{
+            background-color: rgba($color-gray-dark, 1);
+            width: 50rem;
+            height: 35rem;
+            box-shadow: 0 0 4rem #330100;
+            border: .1rem solid $color-black;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            
+            
+            .pokemon__name{
+                width: 60%;
+                height: 5rem;
+                text-transform: capitalize;
+            }
+            
+            .pokemon__type{
+                height: 4rem;
+                width: 100%;
+                position: absolute;
+                top: 6rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                
+                & > *{
+                    height: 100%;
+                    width: 12.5rem;
+                    background-color: white;
+                    border-radius: 100px;
+                    border: .1rem solid $color-black;
+                    position: relative;
+                    z-index: 200;
+                    font-size: 2.4rem;
+                    line-height: 3.8rem;
+                    text-transform: uppercase;
+                    visibility: hidden;
+                }
+                
+                & > *::before{
+                    content: "";
+                    @include center-content;
+                    height: 92%;
+                    width: 11.9rem;
+//                    background-color: gold;
+                    border-radius: 100px;
+                    border: .1rem solid $color-black;
+                    z-index: -1;
+                }
+                
+                &-1{
+                    left: 2rem;
+                }
+                
+                &-2{
+                    right: 2rem;
+                }
+            }
+            
+            .pokemon__image{
+                width: 28rem;
+                height: 28rem;
+                background-size: cover;
+                font-size: 4rem;
+                line-height: 5rem;
+//                animation-duration: 4s;
+//                animation-fill-mode: forwards;
+            }
+        }
+        
+    }
+}

@@ -20,3 +20,8 @@ ghost = #705898
 dark = #705848
 steel = #B8B8D0
 fairy = #EE99AC
+
+giratina nao aparece - está como "giratina-altered" (487)
+no database
+
+arceus e alguns outros estao com typenames junto

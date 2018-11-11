@@ -1,0 +1,24 @@
+//variables
+$color-primary: #d32724;
+$color-primary-dark: #ba3a37;
+$color-primary-light: #ec0400;
+$color-black: #000000;
+$color-white: #FFFFFF;
+$color-gray-dark: #242424;
+
+html,
+body{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}

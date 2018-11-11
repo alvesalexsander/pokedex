@@ -11,13 +11,14 @@
     <body>
        <div class="pokedex">
            <div class="pokedex__frame">
-               <div class="pokedex__frame__search">
+              <div class="pokedex__frame__left">
+               <div class="pokedex__frame__left__search">
                    <form id="search" class="form" method="post" onsubmit="return pkmn_data()">
                        <input class="form__field" type="text" name="nome" placeholder="Quem é esse pokémon?" autocomplete="off">
                        <input class="form__btn" type="submit" value="GO">
                    </form>
                </div>
-               <div class="pokedex__frame__display">
+               <div class="pokedex__frame__left__display">
                    <div id="pokemon-name" class="pokemon__name displayText"></div>
                    <div id="types" class="pokemon__type">
                        <div id="type0" class="pokemon__type-1 displayText"></div>
@@ -25,7 +26,32 @@
                    </div>
                    <div id="pokemon-image" class="pokemon__image displayText">Pesquise pelo nome ou #numero do Pokémon!</div>
                </div>
+               <div class="pokedex__frame__divisor"></div>
+               </div>
+               <div class="pokedex__frame__right">
+                   <div class="pokedex__frame__right__numPad">
+                       <div class="pokedex__frame__right__numPad__row">
+                           <button class="key">1</button>
+                           <button class="key">2</button>
+                           <button class="key">3</button>
+                       </div>
+                       <div class="pokedex__frame__right__numPad__row">
+                           <button class="key">4</button>
+                           <button class="key">5</button>
+                           <button class="key">6</button>
+                       </div>
+                       <div class="pokedex__frame__right__numPad__row">
+                           <button class="key">7</button>
+                           <button class="key">8</button>
+                           <button class="key">9</button>
+                       </div>
+                       <div class="pokedex__frame__right__numPad__row">
+                           <button class="key">0</button>
+                       </div>
+                   </div>
+               </div>
            </div>
+           
        </div>
        
        <a href="https://www.freepik.com/free-photos-vectors/background">Background image created by Rawpixel.com - Freepik.com</a>

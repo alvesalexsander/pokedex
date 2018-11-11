@@ -8,47 +8,104 @@
     align-items: center;
     
     &__frame{
-        width: 60vw;
-        height: 80vh;
-        background: linear-gradient(to top right, rgba($color-primary-dark, 1),rgba($color-primary-dark, 1) 40%, rgba($color-primary, 1));
+        min-width: 110rem;
+        height: 90vh;
+        background: linear-gradient(to top right, rgba($color-primary-dark, 1),rgba($color-primary-dark, 1) 30%, rgba($color-primary, 1));
         border: .3rem solid $color-black;
         border-radius: .3rem;
         position: relative;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
-        flex-direction: column;
-        padding-bottom: 8rem;
         z-index: 1;
         box-shadow: 0 4rem 10rem rgba($color-black, 1);
         
-        
         &::before{
             content: "";
+            @include center-content;
+            background: linear-gradient(to right, rgba($color-primary-dark, 1) 20%, rgba($color-primary, .9) , rgba($color-primary, 1));
+            box-shadow: -.2rem .1rem 1rem $color-black;
+            height: 30%;
+            width: 5%;
+            background-color: $color-white;
             position: absolute;
-            width: 100%;
-            height: 10vh;
-            background: linear-gradient(to bottom left, rgba($color-primary-light, 1), rgba($color-primary-dark, 1));
-            bottom: -.3rem;
-            border: .3rem solid $color-black;
-            transform: scale(1.008);
-            z-index: 2;
-            box-shadow: 0 -1rem 20rem $color-black;
+            top: 15%;
+            border: 2px solid $color-black;
+            border-radius: 3px;
+            transform: translate(-50%, -50%) scale(1.04);
         }
         
-        &__search{
-            width: 40rem;
-            height: 10rem;
+        &::after{
+            content: "";
+            @include center-content;
+            background: linear-gradient(to right, rgba($color-primary-dark, 1) 20%, rgba($color-primary, .9) , rgba($color-primary, 1));
+            box-shadow: -.2rem .1rem 1rem $color-black;
+            height: 30%;
+            width: 5%;
+            background-color: $color-white;
+            position: absolute;
+            top: 85%;
+            border: 2px solid $color-black;
+            border-radius: 3px;
+            transform: translate(-50%, -50%) scale(1.04);
+        }
+        
+        &__divisor{
+            background: linear-gradient(to right, rgba($color-primary-dark, 1) 20%, rgba($color-primary, .9) , rgba($color-primary, 1));
+            box-shadow: -.2rem .1rem 1rem $color-black;
+            height: 40%;
+            width: 9%;
+            background-color: $color-white;
+            @include center-content;
+            left: 102%;
+            border: 2px solid $color-black;
+            border-radius: 3px;
+            z-index: -11;
+            filter: brightness(85%);
+        }
+        
+        
+//        &::before{
+//            content: "";
+//            position: absolute;
+//            width: 100%;
+//            height: 10vh;
+//            background: linear-gradient(to bottom left, rgba($color-primary-light, 1), rgba($color-primary-dark, 1));
+//            bottom: -.3rem;
+//            border: .3rem solid $color-black;
+//            transform: scale(1.008);
+//            z-index: 2;
+//            box-shadow: 0 -1rem 20rem $color-black;
+//        }
+        
+        &__left{
+            height: 100%;
+            width: 49%;
+            position: relative;
             display: flex;
-        }
-        
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            
+            &__search{
+                width: 40rem;
+                height: 10rem;
+                display: flex;
+                position: absolute;
+                top: 5rem;
+                left: 64rem;
+                z-index: 999;
+            }
+            
+            
         &__display{
             background-color: rgba($color-gray-dark, 1);
-            width: 50rem;
+            width: 40rem;
             height: 35rem;
-            box-shadow: 0 0 4rem #330100;
+            box-shadow: 0 0 2rem #330100;
             border: .1rem solid $color-black;
             position: relative;
+            top: -2.5rem;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -89,7 +146,6 @@
                     @include center-content;
                     height: 92%;
                     width: 11.9rem;
-//                    background-color: gold;
                     border-radius: 100px;
                     border: .1rem solid $color-black;
                     z-index: -1;
@@ -113,7 +169,102 @@
 //                animation-duration: 4s;
 //                animation-fill-mode: forwards;
             }
+            
+            &::before{
+                content: "";
+                background-color: rgba($color-white, 1);
+                clip-path: polygon(0% 0%, 95% 0%, 100% 7%, 100% 100%, 0% 100%);
+                width: 45rem;
+                height: 40rem;
+                border-radius: 3px;
+                position: absolute;
+                z-index: -10;
+            }
+            
+            &::after{
+                content: "";
+                background-color: rgba($color-black, 1);
+                clip-path: polygon(0% 0%, 95% 0%, 100% 7%, 100% 100%, 0% 100%);
+                width: 45rem;
+                height: 40rem;
+                border-radius: 3px;
+                position: absolute;
+                z-index: -11;
+                transform: scale(1.006);
+            }
         }
-        
     }
+        
+        &__right{
+            
+            height: 100%;
+            width: 47%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            
+            &::before{
+                    content: "";
+                     background-color: rgba($color-black, 1);
+                clip-path: polygon(7% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 10%);
+                border-radius: 3px;
+                height: 35rem;
+                width:  40rem;
+                    transform: scale(1.008);
+                    position: absolute;
+                    z-index: -10;
+                }
+            
+            &__numPad{
+                background-color: rgba($color-white, 1);
+                clip-path: polygon(7% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 10%);
+//                border: .1rem solid $color-black;
+                border-radius: 3px;
+                height: 35rem;
+                width:  40rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                
+                &__row{
+                    width: 80%;
+                    height: 17%;
+                    display: flex;
+                    justify-content: space-around;
+                    margin-top: 1rem;
+                    
+                    
+                    .key{
+                        height: 100%;
+                        width: 30%;
+                        background: linear-gradient(to top right, rgba($color-primary-dark, 1) 20%, rgba($color-primary, 1));
+                        border-radius: 5px;
+                        border: 1px solid $color-black;
+                        box-shadow: -.5rem .5rem 1rem $color-black;
+                        transition: .1s ease;
+                        text-align: center;
+                        font-size: 2rem;
+                        
+                        
+                        &:active{
+                            box-shadow: 0 0rem 1.4rem rgba($color-black, 1);
+                            transform: scale(.95);
+                            border: .3rem solid $color-black;
+                            filter: brightness(90%);
+                        }
+                        
+                        &:focus{
+                            outline: 0;
+                        }
+                    }
+                }
+            }
+        }
+                
+    }
+    
 }

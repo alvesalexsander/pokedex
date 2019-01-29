@@ -451,6 +451,68 @@ html {
   outline: 0;
 }
 
+.pokedex__frame__right__loading {
+  position: absolute;
+  height: 3rem;
+  width: 11rem;
+  top: 12rem;
+  left: 9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pokedex__frame__right__loading > * {
+  height: 3rem;
+  width: 3rem;
+  border: 0.1rem solid #000000;
+  border-radius: 150px;
+  position: relative;
+}
+
+.pokedex__frame__right__loading > *::before {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 150px;
+  z-index: -1;
+  -webkit-box-shadow: -.3rem .3rem .3rem;
+          box-shadow: -.3rem .3rem .3rem;
+}
+
+.pokedex__frame__right__loading > *::after {
+  content: "";
+  -webkit-clip-path: polygon(65% 10%, 76% 19%, 70% 37%, 64% 37%, 61% 33%, 59% 27%, 62% 22%, 57% 20%, 49% 18%, 48% 14%, 49% 11%, 51% 10%, 55% 9%, 59% 9%, 72% 13%, 74% 16%, 76% 25%, 75% 30%, 74% 32%);
+  clip-path: polygon(65% 10%, 76% 19%, 70% 37%, 64% 37%, 61% 33%, 59% 27%, 62% 22%, 57% 20%, 49% 18%, 48% 14%, 49% 11%, 51% 10%, 55% 9%, 59% 9%, 72% 13%, 74% 16%, 76% 25%, 75% 30%, 74% 32%);
+  position: absolute;
+  right: .5rem;
+  top: .5rem;
+  background-color: #eee;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 150px;
+}
+
+.pokedex__frame__right__loading--red {
+  background-image: radial-gradient(#ff0300, #a92727);
+}
+
+.pokedex__frame__right__loading--yellow {
+  background-image: radial-gradient(#fff600, #a8b20d);
+}
+
+.pokedex__frame__right__loading--blue {
+  background-image: radial-gradient(#1dff00, #27a71b);
+}
+
 .displayText {
   font-family: 'VT323', monospace;
   font-size: 5rem;
@@ -628,5 +690,13 @@ html {
 
 .fairy:before {
   background-color: #EE99AC;
+}
+
+.ledOff {
+  opacity: .9;
+}
+
+.ledOn {
+  opacity: 1;
 }
 /*# sourceMappingURL=main.css.map */

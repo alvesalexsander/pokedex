@@ -4,10 +4,16 @@ function pkmn_data(){
         method: "GET",
         url: "https://pokeapi.co/api/v2/pokemon/" + pkmn_name + "/",
         data: {},
+        success: function(){
+            cycleLed();
+        },
         error: function(){
             displayRefresh();
             $("#types").children().css("visibility", "hidden");
             document.getElementById("form__field").value = "";
+        },
+        complete: function(){
+            cycleLed();
         }
     })
     
@@ -20,6 +26,7 @@ function pkmn_data(){
         displayType(pkmnType);
         document.getElementById("form__field").value = "";
     })
+    
     return false;
 }
 

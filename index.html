@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1", minimum-scale=1>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"><link href="https://fonts.googleapis.com/css?family=Ubuntu|VT323" rel="stylesheet">
-        <link type="text/css" rel="stylesheet" href="css/style.css">
+        <link type="text/css" rel="stylesheet" href="sass/main.css">
         <title>Pokedex</title>
     </head>
     <body>
@@ -29,6 +29,11 @@
                <div class="pokedex__frame__divisor"></div>
                </div>
                <div class="pokedex__frame__right">
+                   <div id="loading" class="pokedex__frame__right__loading">
+                       <div class="pokedex__frame__right__loading--red"></div>
+                       <div class="pokedex__frame__right__loading--yellow"></div>
+                       <div class="pokedex__frame__right__loading--blue"></div>
+                   </div>
                    <div class="pokedex__frame__right__numPad">
                        <div class="pokedex__frame__right__numPad__row">
                            <button class="key">1</button>
@@ -62,5 +67,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="js/api.js"></script>
     <script src="js/input.js"></script>
+    <script src="js/loadingLed.js"></script>
     </body>
 </html>

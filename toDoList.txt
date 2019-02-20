@@ -1,0 +1,5 @@
+arrowSearch - done
+auto complete list - pending
+key arrow search eventListener - pending
+better layout - pending
+code encapsulation - pending

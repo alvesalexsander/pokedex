@@ -222,8 +222,6 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -241,6 +239,75 @@ html {
   z-index: 999;
 }
 
+.pokedex__frame__left__arrows {
+  position: relative;
+  top: 22rem;
+  width: 30rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pokedex__frame__left__arrows > * {
+  position: relative;
+  z-index: 20;
+  height: 6rem;
+  width: 6rem;
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(20%, #8c1f1e), to(#d32724));
+  background: linear-gradient(to top right, #8c1f1e 20%, #d32724);
+  border: 1px solid black;
+  border-radius: 150px;
+  -webkit-box-shadow: -.3rem .4rem .8rem black;
+          box-shadow: -.3rem .4rem .8rem black;
+  -webkit-transition: .1s ease;
+  transition: .1s ease;
+}
+
+.pokedex__frame__left__arrows > * .shape {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 90;
+  width: 4rem;
+  height: 4rem;
+  background-color: #000;
+  -webkit-clip-path: polygon(17% 43%, 86% 14%, 88% 18%, 89% 19%, 89% 84%, 85% 87%, 22% 61%, 17% 59%, 13% 56%, 10% 50%, 13% 45%);
+  clip-path: polygon(17% 43%, 86% 14%, 88% 18%, 89% 19%, 89% 84%, 85% 87%, 22% 61%, 17% 59%, 13% 56%, 10% 50%, 13% 45%);
+}
+
+.pokedex__frame__left__arrows > *:active {
+  outline: 0;
+  -webkit-box-shadow: 0 0rem 1.4rem black;
+          box-shadow: 0 0rem 1.4rem black;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  border: 0.3rem solid #000000;
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+}
+
+.pokedex__frame__left__arrows > *:focus {
+  outline: 0;
+}
+
+.pokedex__frame__left__arrows .arrow__right .shape {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform: rotate(180deg) translate(50%, 50%);
+          transform: rotate(180deg) translate(50%, 50%);
+}
+
 .pokedex__frame__left__display {
   background-color: #242424;
   width: 40rem;
@@ -249,7 +316,7 @@ html {
           box-shadow: 0 0 2rem #330100;
   border: 0.1rem solid #000000;
   position: relative;
-  top: -2.5rem;
+  top: 15rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -521,6 +588,10 @@ html {
   text-align: center;
 }
 
+button {
+  cursor: pointer;
+}
+
 .form {
   width: 100%;
   display: -webkit-box;
@@ -535,6 +606,39 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.form__autocomplete {
+  width: 60%;
+  position: relative;
+}
+
+.form__autocomplete__items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.form__autocomplete__items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.form__autocomplete__items div *:hover {
+  background-color: #e9e9e9;
+}
+
+.form__autocomplete__active {
+  background-color: DodgerBlue !important;
+  color: #ffffff;
 }
 
 .form__field {

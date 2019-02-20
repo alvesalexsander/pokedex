@@ -1,8 +1,14 @@
-function pkmn_data(){
+function formSearch(){
     var pkmn_name = $("input[name=nome]").val().toLowerCase();
+    pkmn_data(pkmn_name);
+    return false;
+}
+
+function pkmn_data(data){
+    
     $.ajax({
         method: "GET",
-        url: "https://pokeapi.co/api/v2/pokemon/" + pkmn_name + "/",
+        url: "https://pokeapi.co/api/v2/pokemon/" + data + "/",
         data: {},
         success: function(){
             cycleLed();
